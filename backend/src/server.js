@@ -10,11 +10,11 @@ app.use(cors());
 
 
 // MySQL Database Connection
-let db;
+
 
 async function connectToDatabase() {
   try {
-    db = await mysql.createConnection({
+    const db = await mysql.createConnection({
       host: process.env.DB_HOST || 'localhost',
       user: process.env.DB_USER || 'root',
       password: process.env.DB_PASSWORD || 'Dhruv@2981',
