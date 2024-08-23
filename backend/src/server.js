@@ -15,10 +15,10 @@ let db;
 async function connectToDatabase() {
   try {
     db = await mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME
+      host: process.env.DB_HOST || 'localhost',
+      user: process.env.DB_USER || 'root',
+      password: process.env.DB_PASSWORD || 'Dhruv@2981',
+      database: process.env.DB_NAME || 'career_carve'
     });
     console.log('Database connected successfully');
   } catch (error) {
