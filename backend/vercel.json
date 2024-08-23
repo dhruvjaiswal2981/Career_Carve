@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.js"
+      }
+    ],
+    "env": {
+      "DB_HOST": "localhost",
+      "DB_USER": "root",
+      "DB_PASSWORD": "Dhruv@2981",
+      "DB_NAME": "career_carve",
+      "PORT": "5000"
+    }
+}
+  
